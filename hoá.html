@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Nguyên Tố, Ký Hiệu Hóa Học và Số Nguyên Tử</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            display: none;
+            min-height: 150px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .question.active {
+            display: block;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: #4CAF50;  /* Màu xanh cho câu trả lời đúng */
+            color: white;
+        }
+        .incorrect {
+            background-color: #f44336;  /* Màu đỏ cho câu trả lời sai */
+            color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #0077cc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nguyên Tố, Ký Hiệu Hóa Học và Số Nguyên Tử</h1>
+    </header>
+    <div class="container">
+        <h2>Kiểm Tra Hiểu Biết</h2>
+
+        <div class="question active" id="question1">
+            <h3>Câu 1: Nguyên tố là một chất được tạo thành từ các nguyên tử có cùng số proton.</h3>
+            <button onclick="checkAnswer('question1', 'a')">A. Đúng</button>
+            <button onclick="checkAnswer('question1', 'b')">B. Sai</button>
+        </div>
+
+        <div class="question" id="question2">
+            <h3>Câu 2: Ký hiệu hóa học của mỗi nguyên tố được xác định bởi?</h3>
+            <button onclick="checkAnswer('question2', 'a')">A. Số neutron</button>
+            <button onclick="checkAnswer('question2', 'b')">B. Số proton</button>
+            <button onclick="checkAnswer('question2', 'c')">C. Số electron</button>
+        </div>
+
+        <div class="question" id="question3">
+            <h3>Câu 3: Tổng số proton và neutron trong hạt nhân được gọi là?</h3>
+            <button onclick="checkAnswer('question3', 'a')">A. Số khối</button>
+            <button onclick="checkAnswer('question3', 'b')">B. Số nguyên tử</button>
+            <button onclick="checkAnswer('question3', 'c')">C. Số hóa trị</button>
+        </div>
+
+        <div class="question" id="question4">
+            <h3>Câu 4: Hạt nào quyết định tính chất hóa học của nguyên tố?</h3>
+            <button onclick="checkAnswer('question4', 'a')">A. Proton</button>
+            <button onclick="checkAnswer('question4', 'b')">B. Neutron</button>
+            <button onclick="checkAnswer('question4', 'c')">C. Electron</button>
+        </div>
+
+        <div class="question" id="question5">
+            <h3>Câu 5: Electron nằm ở đâu trong nguyên tử?</h3>
+            <button onclick="checkAnswer('question5', 'a')">A. Trong hạt nhân</button>
+            <button onclick="checkAnswer('question5', 'b')">B. Ở các lớp vỏ xung quanh hạt nhân</button>
+            <button onclick="checkAnswer('question5', 'c')">C. Không xác định</button>
+        </div>
+
+        <div class="question" id="question6">
+            <h3>Câu 6: Neutron là hạt mang điện tích gì?</h3>
+            <button onclick="checkAnswer('question6', 'a')">A. Dương</button>
+            <button onclick="checkAnswer('question6', 'b')">B. Âm</button>
+            <button onclick="checkAnswer('question6', 'c')">C. Không mang điện</button>
+        </div>
+
+        <div class="question" id="question7">
+            <h3>Câu 7: Số electron trong một nguyên tử trung hòa bằng?</h3>
+            <button onclick="checkAnswer('question7', 'a')">A. Số proton</button>
+            <button onclick="checkAnswer('question7', 'b')">B. Số neutron</button>
+            <button onclick="checkAnswer('question7', 'c')">C. Số khối</button>
+        </div>
+
+        <div class="question" id="question8">
+            <h3>Câu 8: Proton có khối lượng gần bằng khối lượng của?</h3>
+            <button onclick="checkAnswer('question8', 'a')">A. Electron</button>
+            <button onclick="checkAnswer('question8', 'b')">B. Neutron</button>
+            <button onclick="checkAnswer('question8', 'c')">C. Cả hai</button>
+        </div>
+
+        <div class="question" id="question9">
+            <h3>Câu 9: Nguyên tố nào có số proton là 1?</h3>
+            <button onclick="checkAnswer('question9', 'a')">A. Heli</button>
+            <button onclick="checkAnswer('question9', 'b')">B. Hydro</button>
+            <button onclick="checkAnswer('question9', 'c')">C. Oxy</button>
+        </div>
+
+        <div class="question" id="question10">
+            <h3>Câu 10: Phần lớn khối lượng của nguyên tử nằm ở đâu?</h3>
+            <button onclick="checkAnswer('question10', 'a')">A. Ở hạt nhân</button>
+            <button onclick="checkAnswer('question10', 'b')">B. Ở các lớp vỏ</button>
+            <button onclick="checkAnswer('question10', 'c')">C. Phân bố đều</button>
+        </div>
+
+        <div class="question" id="question11">
+            <h3>Câu 11: Số khối của một nguyên tử là tổng của?</h3>
+            <button onclick="checkAnswer('question11', 'a')">A. Proton và neutron</button>
+            <button onclick="checkAnswer('question11', 'b')">B. Proton và electron</button>
+            <button onclick="checkAnswer('question11', 'c')">C. Neutron và electron</button>
+        </div>
+
+        <div class="question" id="question12">
+            <h3>Câu 12: Hạt nào có khối lượng nhỏ nhất?</h3>
+            <button onclick="checkAnswern('question12', 'a')">A. Proton</button>
+            <button onclick="checkAnswer('question12', 'b')">B. Neutron</button>
+            <button onclick="checkAnswer('question12', 'c')">C. Electron</button>
+        </div>
+
+        <div class="question" id="question13">
+            <h3>Câu 13: Hạt nhân nguyên tử chứa những loại hạt nào?</h3>
+            <button onclick="checkAnswer('question13', 'a')">A. Proton và neutron</button>
+            <button onclick="checkAnswer('question13', 'b')">B. Proton và electron</button>
+            <button onclick="checkAnswer('question13', 'c')">C. Electron và neutron</button>
+        </div>
+
+        <div class="question" id="question14">
+            <h3>Câu 14: Nguyên tử của cùng một nguyên tố luôn có?</h3>
+            <button onclick="checkAnswer('question14', 'a')">A. Cùng số proton</button>
+            <button onclick="checkAnswer('question14', 'b')">B. Cùng số neutron</button>
+            <button onclick="checkAnswer('question14', 'c')">C. Cùng số electron</button>
+        </div>
+
+        <div class="question" id="question15">
+            <h3>Câu 15: Đồng vị là các nguyên tử có?</h3>
+            <button onclick="checkAnswer('question15', 'a')">A. Cùng số proton, khác số neutron</button>
+            <button onclick="checkAnswer('question15', 'b')">B. Cùng số neutron, khác số proton</button>
+            <button onclick="checkAnswer('question15', 'c')">C. Cùng số proton và neutron</button>
+        </div>
+
+        <!-- Các nút điều hướng -->
+        <div id="navigation">
+            <button id="prevBtn" onclick="navigate(-1)" style="display:none;">Quay lại</button>
+            <button id="nextBtn" onclick="navigate(1)">Tiếp theo</button>
+        </div>
+
+        <div class="question" id="completion" style="display: none;">
+            <h3>Bạn đã hoàn thành bài kiểm tra! Cảm ơn bạn đã tham gia.</h3>
+        </div>
+
+        <script>
+            const correctAnswers = {
+                question1: 'a',
+                question2: 'b',
+                question3: 'a',
+                question4: 'a',
+                question5: 'b',
+                question6: 'c',
+                question7: 'a',
+                question8: 'b',
+                question9: 'b',
+                question10: 'a',
+                question11: 'a',
+                question12: 'c',
+                question13: 'a',
+                question14: 'a',
+                question15: 'a'
+            };
+
+            let currentQuestionIndex = 0;
+            const questions = document.querySelectorAll('.question');
+            
+            // Hiển thị câu hỏi đầu tiên
+            showQuestion(currentQuestionIndex);
+
+            function checkAnswer(questionId, selectedAnswer) {
+                const questionElement = document.getElementById(questionId);
+                const selectedButton = Array.from(questionElement.getElementsByTagName('button')).find(button => button.innerText[0].toLowerCase() === selectedAnswer);
+                
+                if (correctAnswers[questionId] === selectedAnswer) {
+                    selectedButton.classList.add('correct');
+                } else {
+                    selectedButton.classList.add('incorrect');
+                }
+            }
+
+            function navigate(step) {
+                if (step === 1) {
+                    if (currentQuestionIndex < questions.length - 1) {
+                        currentQuestionIndex++;
+                    }
+                } else if (step === -1) {
+                    if (currentQuestionIndex > 0) {
+                        currentQuestionIndex--;
+                    }
+                }
+
+                // Cập nhật câu hỏi đang hiển thị
+                showQuestion(currentQuestionIndex);
+            }
+
+            function showQuestion(index) {
+                // Ẩn tất cả câu hỏi
+                questions.forEach((question, i) => {
+                    question.classList.remove('active');
+                });
+
+                // Hiển thị câu hỏi hiện tại
+                questions[index].classList.add('active');
+
+                // Cập nhật nút điều hướng
+                document.getElementById('prevBtn').style.display = index > 0 ? 'inline-block' : 'none';
+                document.getElementById('nextBtn').style.display = index < questions.length - 1 ? 'inline-block' : 'none';
+                
+                // Nếu là câu hỏi cuối, ẩn nút tiếp theo và hiển thị hoàn thành
+                if (index === questions.length - 1) {
+                    document.getElementById('nextBtn').style.display = 'none';
+                    document.getElementById('completion').style.display = 'block';
+                } else {
+                    document.getElementById('completion').style.display = 'none';
+                }
+            }
+        </script>
+    </div>
+    <footer>
+        <p>© 2024 Quiz Hóa Học</p>
+    </footer>
+</body>
+</html>
