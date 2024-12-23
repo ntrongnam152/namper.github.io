@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp Xếp Electron và Kiểm Tra Trắc Nghiệm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #0077cc;
+        }
+        .electron-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .shell {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid #0077cc;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .electron {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff5722;
+            position: absolute;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #005fa3;
+        }
+        footer {
+            text-align: center;
+            background-color: #0077cc;
+            color: white;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        #questionContainer {
+            margin-top: 30px;
+        }
+        #questionContainer p {
+            font-size: 18px;
+        }
+        .answer-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        .answer-btn:hover {
+            background-color: #45a049;
+        }
+        .correct {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .incorrect {
+            background-color: #f44336;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sắp Xếp Electron và Kiểm Tra Trắc Nghiệm</h1>
+    </header>
+
+    <div class="container">
+        <h2>Khám Phá Sắp Xếp Electron</h2>
+        <div class="content">
+            <p>Hãy cùng khám phá cách các electron được sắp xếp trong các lớp vỏ của nguyên tử. Chọn số electron và phân bổ chúng vào các lớp vỏ theo quy tắc.</p>
+        </div>
+
+        <h2>Cấu Trúc Lớp Vỏ Electron</h2>
+        <div class="electron-container">
+            <div class="shell" id="shell1">
+                <h3>Lớp K (2 electron)</h3>
+                <div class="electron" id="electron1_1"></div>
+                <div class="electron" id="electron1_2"></div>
+            </div>
+            <div class="shell" id="shell2">
+                <h3>Lớp L (8 electron)</h3>
+                <div class="electron" id="electron2_1"></div>
+                <div class="electron" id="electron2_2"></div>
+                <div class="electron" id="electron2_3"></div>
+                <div class="electron" id="electron2_4"></div>
+                <div class="electron" id="electron2_5"></div>
+                <div class="electron" id="electron2_6"></div>
+                <div class="electron" id="electron2_7"></div>
+                <div class="electron" id="electron2_8"></div>
+            </div>
+            <div class="shell" id="shell3">
+                <h3>Lớp M (18 electron)</h3>
+                <div class="electron" id="electron3_1"></div>
+                <div class="electron" id="electron3_2"></div>
+                <div class="electron" id="electron3_3"></div>
+                <div class="electron" id="electron3_4"></div>
+                <div class="electron" id="electron3_5"></div>
+                <div class="electron" id="electron3_6"></div>
+                <div class="electron" id="electron3_7"></div>
+                <div class="electron" id="electron3_8"></div>
+                <div class="electron" id="electron3_9"></div>
+                <div class="electron" id="electron3_10"></div>
+                <div class="electron" id="electron3_11"></div>
+                <div class="electron" id="electron3_12"></div>
+                <div class="electron" id="electron3_13"></div>
+                <div class="electron" id="electron3_14"></div>
+                <div class="electron" id="electron3_15"></div>
+                <div class="electron" id="electron3_16"></div>
+                <div class="electron" id="electron3_17"></div>
+                <div class="electron" id="electron3_18"></div>
+            </div>
+            <div class="shell" id="shell4">
+                <h3>Lớp N (32 electron)</h3>
+                <div class="electron" id="electron4_1"></div>
+                <div class="electron" id="electron4_2"></div>
+                <div class="electron" id="electron4_3"></div>
+                <div class="electron" id="electron4_4"></div>
+                <div class="electron" id="electron4_5"></div>
+                <div class="electron" id="electron4_6"></div>
+                <div class="electron" id="electron4_7"></div>
+                <div class="electron" id="electron4_8"></div>
+                <div class="electron" id="electron4_9"></div>
+                <div class="electron" id="electron4_10"></div>
+                <div class="electron" id="electron4_11"></div>
+                <div class="electron" id="electron4_12"></div>
+                <div class="electron" id="electron4_13"></div>
+                <div class="electron" id="electron4_14"></div>
+                <div class="electron" id="electron4_15"></div>
+                <div class="electron" id="electron4_16"></div>
+                <div class="electron" id="electron4_17"></div>
+                <div class="electron" id="electron4_18"></div>
+                <div class="electron" id="electron4_19"></div>
+                <div class="electron" id="electron4_20"></div>
+                <div class="electron" id="electron4_21"></div>
+                <div class="electron" id="electron4_22"></div>
+                <div class="electron" id="electron4_23"></div>
+                <div class="electron" id="electron4_24"></div>
+                <div class="electron" id="electron4_25"></div>
+                <div class="electron" id="electron4_26"></div>
+                <div class="electron" id="electron4_27"></div>
+                <div class="electron" id="electron4_28"></div>
+                <div class="electron" id="electron4_29"></div>
+                <div class="electron" id="electron4_30"></div>
+                <div class="electron" id="electron4_31"></div>
+                <div class="electron" id="electron4_32"></div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="addElectron('shell1')">Thêm Electron vào Lớp K</button>
+            <button onclick="addElectron('shell2')">Thêm Electron vào Lớp L</button>
+            <button onclick="addElectron('shell3')">Thêm Electron vào Lớp M</button>
+            <button onclick="addElectron('shell4')">Thêm Electron vào Lớp N</button>
+        </div>
+
+        <div id="electronDisplay">
+            <p>Hiện tại, bạn chưa thêm electron nào.</p>
+        </div>
+     
+        <h2>Quy Tắc Sắp Xếp</h2>
+        <p>Các electron sẽ được phân bổ vào các lớp vỏ theo thứ tự từ lớp K, L, M, N. Mỗi lớp vỏ có một số lượng electron tối đa nhất định như sau:</p>
+        <ul>
+            <li>Lớp K: tối đa 2 electron</li>
+            <li>Lớp L: tối đa 8 electron</li>
+            <li>Lớp M: tối đa 18 electron</li>
+            <li>Lớp N: tối đa 32 electron</li>
+        </ul>
+ 
+        <h2>Kiểm Tra Trắc Nghiệm</h2>
+        <div id="questionContainer">
+            <div class="question active" id="question1">
+                <h3>Câu 1: Nguyên tố là một chất được tạo thành từ các nguyên tử có cùng số proton.</h3>
+                <button class="answer-btn" onclick="nextQuestion('question1', 'a', this)">A. Đúng</button>
+                <button class="answer-btn" onclick="nextQuestion('question1', 'b', this)">B. Sai</button>
+            </div>
+
+            <div class="question" id="question2">
+                <h3>Câu 2: Ký hiệu hóa học của mỗi nguyên tố được xác định bởi?</h3>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'a', this)">A. Số neutron</button>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'b', this)">B. Số proton</button>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'c', this)">C. Số electron</button>
+            </div>
+        </div>
+    
+    <footer>
+        <p>© 2024 Sắp Xếp Electron - Khoa Học Hóa Học</p>
+    </footer>
+
+    <script>
+        let electronCount = {
+            shell1: 0,
+            shell2: 0,
+            shell3: 0,
+            shell4: 0
+        };
+
+       function addElectron(shell) {
+         const maxElectrons = getMaxElectrons(shell);
+         if (electronCount[shell] < maxElectrons) {
+         electronCount[shell]++;
+         updateShell(shell);
+         displayElectronCount();
+        } else {
+        const electronDisplay = document.getElementById('electronDisplay');
+        electronDisplay.innerHTML = `<p style="color:red;">Lớp vỏ ${shell.toUpperCase()} đã đầy electron!</p>`;
+           }
+        }
+
+
+        function getMaxElectrons(shell) {
+            switch (shell) {
+                case 'shell1': return 2;
+                case 'shell2': return 8;
+                case 'shell3': return 18;
+                case 'shell4': return 32;
+                default: return 0;
+            }
+        }
+
+       function updateShell(shell) {
+        const shellElement = document.getElementById(shell);
+        const electrons = shellElement.querySelectorAll('.electron');
+        const angleStep = 360 / getMaxElectrons(shell);
+
+    electrons.forEach((electron, index) => {
+        if (index < electronCount[shell]) {
+            const angle = index * angleStep;
+            const radius = shellElement.offsetWidth / 2 - 15; // Khoảng cách từ tâm
+            const x = Math.cos(angle * Math.PI / 180) * radius + shellElement.offsetWidth / 2 - 10;
+            const y = Math.sin(angle * Math.PI / 180) * radius + shellElement.offsetHeight / 2 - 10;
+
+            electron.style.left = `${x}px`;
+            electron.style.top = `${y}px`;
+            electron.style.display = "block";
+        } else {
+            electron.style.display = "none";
+        }
+    });
+}
+
+
+        function displayElectronCount() {
+            const electronDisplay = document.getElementById('electronDisplay');
+            electronDisplay.innerHTML = `<p>Electron hiện tại trong các lớp:</p>
+                <ul>
+                    <li>Lớp K: ${electronCount.shell1} electron</li>
+                    <li>Lớp L: ${electronCount.shell2} electron</li>
+                    <li>Lớp M: ${electronCount.shell3} electron</li>
+                    <li>Lớp N: ${electronCount.shell4} electron</li>
+                </ul>`;
+        }
+      const correctAnswers = {
+    question1: {
+        answer: 'a',
+        explanation: 'nguyên tố được định nghĩa bởi các nguyên tử có cùng số proton.'
+    },
+    question2: {
+        answer: 'b',
+        explanation: 'Số proton xác định ký hiệu hóa học của một nguyên tố, vì nó là đặc trưng cho từng nguyên tố.'
+    }
+};
+       function nextQuestion(currentId, selectedAnswer, buttonElement) {
+    const currentElement = document.getElementById(currentId);
+
+    // Kiểm tra câu trả lời
+    const isCorrect = correctAnswers[currentId].answer === selectedAnswer;
+    if (isCorrect) {
+        buttonElement.classList.add('correct');
+        currentElement.insertAdjacentHTML(
+            'beforeend',
+            `<p style="color:green;">Đáp án đúng! ${correctAnswers[currentId].explanation}</p>`
+        );
+    } else {
+        buttonElement.classList.add('incorrect');
+        currentElement.insertAdjacentHTML(
+            'beforeend',
+            '<p style="color:red;">Sai rồi! Hãy thử lại.</p>'
+        );
+        return; // Không chuyển sang câu hỏi tiếp theo nếu sai
+    }
+
+    // Chuyển đến câu hỏi tiếp theo sau 2 giây
+    setTimeout(() => {
+        currentElement.classList.remove('active');
+        const nextElement = currentElement.nextElementSibling;
+        if (nextElement) {
+            nextElement.classList.add('active');
+        }
+    }, 3000);
+}
+
+    </script>
+  </div>
+</body>
+</html>
