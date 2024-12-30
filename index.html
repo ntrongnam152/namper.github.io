@@ -86,7 +86,7 @@
         .answer-btn {
             padding: 10px 20px;
             background-color: #4CAF50;
-            color: white;
+            color: black;
             border: none;
             cursor: pointer;
             font-size: 16px;
@@ -97,7 +97,7 @@
         }
         .correct {
             background-color: #4CAF50;
-            color: white;
+            color: black;
         }
 
         .incorrect {
@@ -217,17 +217,85 @@
         <h2>Kiểm Tra Trắc Nghiệm</h2>
         <div id="questionContainer">
             <div class="question active" id="question1">
-                <h3>Câu 1: Nguyên tố là một chất được tạo thành từ các nguyên tử có cùng số proton.</h3>
-                <button class="answer-btn" onclick="nextQuestion('question1', 'a', this)">A. Đúng</button>
-                <button class="answer-btn" onclick="nextQuestion('question1', 'b', this)">B. Sai</button>
+                <h3>Câu 1: Phát biểu đúng khi nói về mô hình nguyên tử hiện đại là.</h3>
+                <button class="answer-btn" onclick="nextQuestion('question1', 'a', this)">A. Các electron chuyển động theo những quỹ đạo hình tròn hay bầu dục xác định xung quanh hạt nhân.</button>
+                <button class="answer-btn" onclick="nextQuestion('question1', 'b', this)">B. Trong nguyên tử, các electron chuyển động rất nhanh xung quanh hạt nhân theo một quỹ đạo xác định, tạo thành đám mây electron.</button>
+                <button class="answer-btn" onclick="nextQuestion('question1', 'c', this)">C. Trong nguyên tử, các electron chuyển động rất nhanh xung quanh hạt nhân không theo một quỹ đạo xác định, tạo thành đám mây electron.</button>
+                <button class="answer-btn" onclick="nextQuestion('question1', 'd', this)">D. Các electron chuyển động theo những quỹ đạo hình tròn hay bầu dục xác định xung quanh hạt nhân, tạo thành đám mây electron.</button>
             </div>
 
             <div class="question" id="question2">
-                <h3>Câu 2: Ký hiệu hóa học của mỗi nguyên tố được xác định bởi?</h3>
-                <button class="answer-btn" onclick="nextQuestion('question2', 'a', this)">A. Số neutron</button>
-                <button class="answer-btn" onclick="nextQuestion('question2', 'b', this)">B. Số proton</button>
-                <button class="answer-btn" onclick="nextQuestion('question2', 'c', this)">C. Số electron</button>
+                <h3>Câu 2: Trong nguyên tử, các electron được sắp xếp thành từng lớp từ gần đến xa hạt nhân. Kí hiệu của các lớp thứ 1, lớp 2, lớp 3, lớp 4 lần lượt là</h3>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'a', this)">A. A, B, C, D</button>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'b', this)">B. V, X, Y, Z</button>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'c', this)">C. K, L, M, N</button>
+                <button class="answer-btn" onclick="nextQuestion('question2', 'd', this)">D. M, N, O, P</button>
             </div>
+          
+            <div class="question" id="question3">
+                 <h3>Câu 3: Khẳng định nào sau đây là đúng?</h3>
+                <button class="answer-btn" onclick="nextQuestion('question3', 'a', this)">A. Các electron trên cùng một lớp có năng lượng bằng nhau, trên cùng một phân lớp có năng lượng gần bằng nhau</button>
+                <button class="answer-btn" onclick="nextQuestion('question3', 'b', this)">B. Các electron trên cùng một lớp có năng lượng gần bằng nhau, trên cùng một phân lớp có năng lượng bằng nhau</button>
+                <button class="answer-btn" onclick="nextQuestion('question3', 'c', this)">C. Các electron trên cùng một lớp, phân lớp đều có mức năng lượng bằng nhau</button>
+                <button class="answer-btn" onclick="nextQuestion('question3', 'd', this)">D. Các electron trên cùng một lớp, phân lớp có mức năng lượng gần bằng nhau</button>
+          </div>
+          
+          <div class="question" id="question4">
+                <h3>Câu 4: Khẳng định sai là?</h3>
+                <button class="answer-btn" onclick="nextQuestion('question4', 'a', this)">A. Các phân lớp s2, p6, d10, f14 chứa đủ số electron tối đa gọi là phân lớp bão hòa</button>
+                <button class="answer-btn" onclick="nextQuestion('question4', 'b', this)">B. Các phân lớp s1, p3, d5, f7 chứa một nửa số electron tối đa gọi là phân lớp nửa bão hòa</button>
+                <button class="answer-btn" onclick="nextQuestion('question4', 'c', this)">C. Các phân lớp chưa đủ số electron tối đa gọi là phân lớp chưa bão hòa</button>
+                <button class="answer-btn" onclick="nextQuestion('question4', 'd', this)">D. Trong cùng một phân lớp chưa bão hòa, các electron sẽ phân bố vào các orbital sao cho số electron độc thân là tối thiểu</button>
+            </div>
+          
+          <div class="question" id="question5">
+                <h3>Câu 5: Cho nguyên tử Fe có Z = 26. Cấu hình electron của nguyên tử Fe là</h3>
+                <button class="answer-btn" onclick="nextQuestion('question5', 'a', this)">A. 1s2 2s2 2p6 3s2 3p6 3d8</button>
+                <button class="answer-btn" onclick="nextQuestion('question5', 'b', this)">B. 1s2 2s2 2p6 3s2 3p6 4d8</button>
+                <button class="answer-btn" onclick="nextQuestion('question5', 'c', this)">C. 1s2 2s2 2p6 3s2 3p6 4s2 3d6</button>
+                <button class="answer-btn" onclick="nextQuestion('question5', 'd', this)">D. 1s2 2s2 2p6 3s2 3p6 3d6 4s2</button>
+            </div>
+          
+          <div class="question" id="question6">
+                <h3>Câu 6: Nguyên tử X có cấu hình electron 1s2 2s2 2p6 3s2 3p5. Khẳng định sai là</h3>
+                <button class="answer-btn" onclick="nextQuestion('question6', 'a', this)">A. Nguyên tử X có 17 electron</button>
+                <button class="answer-btn" onclick="nextQuestion('question6', 'b', this)">B. Phân lớp 3p của nguyên tử X chưa bão hòa</button>
+                <button class="answer-btn" onclick="nextQuestion('question6', 'c', this)">C. Nguyên tử X có 5 electron ở lớp ngoài cùng</button>
+                <button class="answer-btn" onclick="nextQuestion('question6', 'd', this)">D. Nguyên tử X có 3 lớp electron</button>
+            </div>
+          
+          <div class="question" id="question7">
+                <h3>Câu 7: Nguyên tố Y có 2 lớp electron, lớp thứ hai có 5 electron. Số hiệu nguyên tử của Y là</h3>
+                <button class="answer-btn" onclick="nextQuestion('question7', 'a', this)">A. 2</button>
+                <button class="answer-btn" onclick="nextQuestion('question7', 'b', this)">B. 5</button>
+                <button class="answer-btn" onclick="nextQuestion('question7', 'c', this)">C. 7</button>
+                <button class="answer-btn" onclick="nextQuestion('question7', 'd', this)">D. 9</button>
+            </div>
+          
+          <div class="question" id="question8">
+                <h3>Câu 8: Cho nguyên tố A có Z = 11. A là nguyên tố</h3>
+                <button class="answer-btn" onclick="nextQuestion('question8', 'a', this)">A. kim loại</button>
+                <button class="answer-btn" onclick="nextQuestion('question8', 'b', this)">B. phi kim</button>
+                <button class="answer-btn" onclick="nextQuestion('question8', 'c', this)">C. khí hiếm</button>
+                <button class="answer-btn" onclick="nextQuestion('question8', 'd', this)">D. có thể là kim loại hoặc phi kim</button>
+            </div>
+          
+          <div class="question" id="question9">
+                <h3>Câu 9: Các phân lớp s, p, d và f lần lượt có các số AO tương ứng là</h3>
+                <button class="answer-btn" onclick="nextQuestion('question9', 'a', this)">A. 1; 4; 9; 16</button>
+                <button class="answer-btn" onclick="nextQuestion('question9', 'b', this)">B. 1; 2; 3; 4</button>
+                <button class="answer-btn" onclick="nextQuestion('question9', 'c', this)">C. 1; 3; 5; 7</button>
+                <button class="answer-btn" onclick="nextQuestion('question9', 'd', this)">D. 2; 6; 10; 14</button>
+            </div>
+          
+          <div class="question" id="question10">
+                <h3>Câu 10: Theo nguyên lí Pauli</h3>
+                <button class="answer-btn" onclick="nextQuestion('question10', 'a', this)">A. Mỗi orbital chỉ chứa tối đa 2 electron và có chiều tự quay ngược nhau.</button>
+                <button class="answer-btn" onclick="nextQuestion('question10', 'b', this)">B. Mỗi orbital chỉ chứa tối đa 1 electron.</button>
+                <button class="answer-btn" onclick="nextQuestion('question10', 'c', this)">C. Mỗi orbital chỉ chứa tối đa 2 electron và có cùng chiều tự quay.</button>
+                <button class="answer-btn" onclick="nextQuestion('question10', 'd', this)">D. Mỗi orbital chứa tối đa 3 electron.</button>
+            </div>
+          
         </div>
     
     <footer>
@@ -298,14 +366,46 @@
                 </ul>`;
         }
       const correctAnswers = {
-    question1: {
-        answer: 'a',
-        explanation: 'nguyên tố được định nghĩa bởi các nguyên tử có cùng số proton.'
+      question1: {
+        answer: 'c',
+        explanation: 'Trong nguyên tử, các electron chuyển động rất nhanh xung quanh hạt nhân không theo một quỹ đạo xác định, tạo thành đám mây electron.'
     },
-    question2: {
+      question2: {
+        answer: 'c',
+        explanation: 'Trong nguyên tử, các electron được sắp xếp thành từng lớp từ gần đến xa hạt nhân. Kí hiệu của các lớp thứ 1, lớp 2, lớp 3, lớp 4 lần lượt là K, L, M, N.'
+    },  
+      question3: {
         answer: 'b',
-        explanation: 'Số proton xác định ký hiệu hóa học của một nguyên tố, vì nó là đặc trưng cho từng nguyên tố.'
-    }
+        explanation: 'Các electron trên cùng một lớp có năng lượng gần bằng nhau, trên cùng một phân lớp có năng lượng bằng nhau.'
+    }, 
+      question4: {
+        answer: 'd',
+        explanation: 'Theo quy tắc Hund: Trong cùng một phân lớp chưa bão hòa, các electron sẽ phân bố vào các orbital sao cho số electron độc thân là tối đa.Do đó khẳng định D là khẳng định sai.'
+    }, 
+      question5: {
+        answer: 'd',
+        explanation: 'Nguyên tử Fe có Z = 26 ⇒ có 26 electron.Phân bố 26 electron vào các AO theo thứ tự mức năng lượng tăng dần, theo nguyên lí và quy tắc phân bố electron: 1s2 2s2 2p6 3s2 3p6 4s2 3d6.Sắp xếp lại vị trí của phân lớp 4s2 và 3d6 theo quy tắc ta được cấu hình electron là:1s2 2s2 2p6 3s2 3p6 3d6 4s2.'
+    }, 
+      question6: {
+        answer: 'c',
+        explanation: 'Lớp ngoài cùng là lớp thứ 3 có tổng số electron là 2 + 5 = 7 (electron) nên nguyên tử X có 7 electron ở lớp ngoài cùng. ⇒ C sai.'
+    }, 
+      question7: {
+        answer: 'c',
+        explanation: 'Có 2 lớp electron ⇒ lớp ngoài cùng là lớp thứ 2.Mà lớp thứ 2 có 5 electron ⇒ cấu hình electron lớp ngoài cùng là: 2s2 2p3⇒ Cấu hình electron đầy đủ là: 1s2 2s2 2p3 ⇒ số electron = 2 + 2 + 3 = 7.Số hiệu nguyên tử Z = số electron = 7.'
+    }, 
+      question8: {
+        answer: 'a',
+        explanation: 'A có Z = 11 ⇒ có 11 electron ⇒ Cấu hình electron của A là: 1s2 2s2 2p6 3s1 ⇒ A có 1 electron lớp ngoài cùng.Mà các nguyên tử có 1, 2, 3 electron lớp ngoài cùng là các nguyên tử của nguyên tố kim loại (trừ H, He, B).Do đó, A là nguyên tố kim loại.'
+    }, 
+      question9: {
+        answer: 'c',
+        explanation: 'Các phân lớp s, p, d và f lần lượt có các số AO tương ứng là 1; 3; 5 và 7.'
+    },
+      question10: {
+        answer: 'a',
+        explanation: 'Theo nguyên lí Pauli: Mỗi orbital chỉ chứa tối đa 2 electron và có chiều tự quay ngược nhau.'
+    } 
 };
        function nextQuestion(currentId, selectedAnswer, buttonElement) {
     const currentElement = document.getElementById(currentId);
